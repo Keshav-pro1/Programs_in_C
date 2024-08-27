@@ -1,19 +1,29 @@
 #include <stdio.h>
-#include<conio.h>
+//#include<conio.h>
 int main() {
-    clrscr();
-    int year,check;
-    printf("year= ");
-    scanf("%d",&year);
+//    clrscr();
+    char Ch_In;
+    printf("Enter the character= ");
+    scanf("%c",&Ch_In);
     
-    check=year%4;
-    if (check==0){
-        printf("LEAP YEAR");
+    if (Ch_In=='A'||Ch_In=='E'||Ch_In=='I'||Ch_In=='O'||Ch_In=='U'||Ch_In=='a'||Ch_In=='e'||Ch_In=='i'||Ch_In=='o'||Ch_In=='u')
+    {
+        printf("vowel");
     }
-    else{
-         printf("NOT LEAP YEAR");
+    else if ((Ch_In>='a' && Ch_In<='z')||(Ch_In>='A'&& Ch_In<='Z'))
+    {
+        printf("consonant");
     }
-    getch();
+    else if (Ch_In>='0' && Ch_In<='9')
+    {
+        printf("integer");
+    }
+    else
+    {
+        printf("Special character");
+    }
+    
+//    getch();
     return 0;
 }
 
